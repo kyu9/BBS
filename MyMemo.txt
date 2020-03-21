@@ -1,0 +1,26 @@
+1. "The value for the useBean class attribute is invalid" 에러
+
+JSP 페이지의 소스 코드 상에 틀린 부분이 없음에도 불구하고
+
+
+"The value for the useBean class attribute is invalid"
+
+
+라는 에러가 뜨면서 JSP 페이지가 정상적으로 보여지지 않는 경우에는 톰캣 서버를 재시작 해보세요.
+
+--------------------------------------------------------------------------------------------------------------
+The server time zone value '????α? ????' is unrecognized or represents more than one time zone
+발생시
+
+
+private static String dburl = "jdbc:mysql://localhost:3306/DB이름 <- 이 라인에
+
+?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC <- 이 라인을 추가 해 주면 해결된다.
+--------------------------------------------------------------------------------------------------------------
+만약 게시물이나 게시물 제목에 script문을 넣게되면 글이 나오지 않고 입력한 script문이 나오게 되는데 이유는 html에서 해당 문자들을 태그의 종류로 받아들여야 하는지 문자로 받아들여야 하는지 애매해져서 발생하는 문제이다. 이것도 해킹의 종류로써 이를 방지하기 위해서
+.replaceAll(문제가되는 문자,이렇게 인식하라)
+이 함수를 사용한다. 예시로는 
+'<'----------&it;
+'>'----------&gt;
+' '----------&nbsp;
+'&'----------&amp;
