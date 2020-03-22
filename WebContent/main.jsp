@@ -7,6 +7,7 @@
 <meta http-equiv="content-Type" content="text/html"; charset="UTF-8">
 <meta name="viewport" content="width=device-width", initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/custom.css">
 <title>JSP 게시판 웹 사이트</title>
 </head>
 <body>
@@ -60,21 +61,36 @@
 		</div>
 	</nav>
 	<div class="container">
-		<div class="col-lg-4"></div>
-		<div class="jumbotron" style="padding-top:20px">
-			<form method="post" action="loginAction.jsp">
-				<h3 style="text-align: center;">로그인 화면</h3>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="아이디" name="userId" maxlength="20">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
-				</div>
-				<input type="submit" class="btn-primary form-control" value="로그인">
-			</form>
+		<div class="jumbotron">
+			<h1>웹 사이트 소개</h1>
+			<p>이 웹사이트는...</p>
+			<p><a class ="btn btn-primary btn-pull" href="#" role="button">자세히 알아보기</a></p>
+			
 		</div>
-		<div class="col-lg-4"></div>
 	</div>
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="image/0.png" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="image/1.png"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="image/0.png">
+				</div>
+				<div class="item">
+					<img src="image/1.png">
+				</div>
+			</div>
+		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+	</div>
+	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
